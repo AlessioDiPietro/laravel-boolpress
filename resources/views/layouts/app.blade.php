@@ -75,6 +75,14 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        @auth
+            <div class="text-center">
+                <strong><h1>BENVENUTO ADMIN!</h1></strong>
+            </div>
+            
+            
+        @endauth
     </div>
 </body>
 </html>
