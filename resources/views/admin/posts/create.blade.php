@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="container">
-    <form action='{{route('admin.posts.index')}}'method="post">
+    <form action='{{route('admin.posts.store')}}'method="post">
         @csrf
         <div class="mb-3">
           <label for="titolo" class="form-label">Titolo</label>
