@@ -65,7 +65,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $post = Post::find();
+        $post = Post::find($id);
         return view('admin.posts.edit', compact('post'));
     }
 
@@ -79,7 +79,7 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         $data=$request->all();
-        $pasta->update($data);
+        $post->update($data);
         return redirect()->route('admin.posts.index');
     }
 
