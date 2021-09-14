@@ -13,7 +13,7 @@
         </a>
         <div class="btn_box d-flex justify-content-start align-items-center">
             <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-warning">edit</a>
-            <form action="" class="d-flex mt-3">
+            <form action="" class="d-flex mt-3 delete_form">
                 @csrf
                 @method('DELETE')
                 <input type="submit" value='delete' class="btn btn-danger">
