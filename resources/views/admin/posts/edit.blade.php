@@ -8,9 +8,9 @@
         @method('PUT')
         <div class="mb-3">
         <label for="titolo" class="form-label">Titolo</label>
-        <input type="text" class="form-control" id="titolo" aria-describedby="emailHelp" name="title" value="{{$post->title}}">
+        <input type="text" class="form-control" id="titolo" aria-describedby="emailHelp" name="title" value="{{ old('title', $post->title)}}">
         <label for="descrizione" class="form-label">articolo</label>
-        <textarea name="article" id="descrizione" cols="30" rows="10" class="form-control">{{$post->article}}</textarea>  
+        <textarea name="article" id="descrizione" cols="30" rows="10" class="form-control">{{ old('article', $post->article)}}</textarea>  
         </div>
         <button type="submit" class="btn btn-primary">crea</button>
     </form>
