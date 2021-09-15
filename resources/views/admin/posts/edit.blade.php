@@ -13,6 +13,14 @@
         <textarea name="article" id="descrizione" cols="30" rows="10" class="form-control">{{ old('article', $post->article)}}</textarea>  
         </div>
         <button type="submit" class="btn btn-primary">crea</button>
+        @if ($errors->any())
+            <div class="alert">
+                @foreach ( $errors->all() as $er)
+                    <h2>! {{$er}}</h2>
+                @endforeach
+                <h2>Attenzione i campi non sono compilati</h2>
+            </div>
+        @endif
     </form>
     
 @endsection
